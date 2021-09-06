@@ -1,3 +1,14 @@
+import numpy as np
+import matplotlib.pyplot as plt
+def line_gen(A,B):
+  len =10
+  x_AB = np.zeros((2,len))
+  lam_1 = np.linspace(0,1,len)
+  for i in range(len):
+    temp1 = A + lam_1[i]*(B-A)
+    x_AB[:,i]= temp1.T
+  return x_AB
+
 a=6
 b=3
 A=np.array([a+b,a-b])
